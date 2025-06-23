@@ -13,3 +13,4 @@ torch.tensor([1,2,3,4])
 2.tensor常见运用
 #1.tensor【0】【9】取值 
   tensor【1】.item（）
+  torch.sum（data）  直接相加  torch.sum(data,axis=0) [列和] 行和 axis=1
