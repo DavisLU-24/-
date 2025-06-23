@@ -1,0 +1,4 @@
+torch.cuda.is_available()
+
+1.数据结构 tensor
+torch.tensor([1,2,3,4])
