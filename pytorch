@@ -2,3 +2,8 @@ torch.cuda.is_available()
 
 1.数据结构 tensor
 torch.tensor([1,2,3,4])
+#1.两行 tensor([[1,2,3],[4,5,6]])
+#2.rand torch.rand(2,5) 
+            .ones(2,5)
+            .zeros(2,5)
+#3.属性 tensor.shape 
