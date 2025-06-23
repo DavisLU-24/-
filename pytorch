@@ -6,4 +6,10 @@ torch.tensor([1,2,3,4])
 #2.rand torch.rand(2,5) 
             .ones(2,5)
             .zeros(2,5)
-#3.属性 tensor.shape 
+#3.属性 tensor.shape    .dtype
+            改变type   data=torch.tensor()
+                        data=data.to(torch.int)
+
+2.tensor常见运用
+#1.tensor【0】【9】取值 
+  tensor【1】.item（）
