@@ -19,3 +19,5 @@ torch.tensor([1,2,3,4])
      print(torch.sum(predict==label)) 
      torch.mean((data==data2).to(torch.float32))
 #5.索引排序 torch.argsort()
+#6.改变数据的排列方式 （变成3行3列）
+   data=data.view(3,3)
