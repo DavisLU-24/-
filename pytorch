@@ -18,3 +18,4 @@ torch.tensor([1,2,3,4])
 #4.准确率 predict label 
      print(torch.sum(predict==label)) 
      torch.mean((data==data2).to(torch.float32))
+#5.索引排序 torch.argsort()
