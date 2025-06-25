@@ -1,0 +1,10 @@
+import torch.nn as nn
+model=nn.Sequential(
+  nn.Linear(784,a),
+  nn.ReLU(),
+  nn.Linear(a,b),
+  nn.ReLU(),
+  nn.Linear(b,10),
+  nn.Softmax()
+)
+
