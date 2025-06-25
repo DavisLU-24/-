@@ -8,3 +8,10 @@ model=nn.Sequential(
   nn.Softmax()
 )
 
+#1.数据集的创建
+data=pd.read_csv()
+//label    label=data['label'].values //变成numpy数组
+//feature   feature=data.drop(['label'],axis=1).values
+//     train_feature=feature[:int(len(feature)*0.8]   //切片操作
+//     train_label=label[:int(len(feature)*0.8]
+//     teat_f     =feature[int(len(feature)*0.8:]
