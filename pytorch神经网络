@@ -15,6 +15,7 @@ data=pd.read_csv()
 //     train_feature=feature[:int(len(feature)*0.8]   //切片操作
 //     train_label=label[:int(len(feature)*0.8]
 //     teat_f     =feature[int(len(feature)*0.8:]
-train_feature=torch.tensor(train_feature)//转换成tensor
+train_feature=torch.tensor(train_feature).to(torch.float)//转换成tensor
+
 #2.模型预测
 优化器 optimizer=torch.optimizer(params=model.
