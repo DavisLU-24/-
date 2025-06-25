@@ -1,4 +1,5 @@
 import torch.nn as nn
+模型model确定
 model=nn.Sequential(
   nn.Linear(784,a),
   nn.ReLU(),
@@ -9,6 +10,7 @@ model=nn.Sequential(
 )
 
 #1.数据集的创建
+取出行列-> pd变np（.values)-> np变 tensor 
 data=pd.read_csv()
 //label    label=data['label'].values //变成numpy数组
 //feature   feature=data.drop(['label'],axis=1).values
@@ -18,4 +20,34 @@ data=pd.read_csv()
 train_feature=torch.tensor(train_feature).to(torch.float)//转换成tensor
 
 #2.模型预测
-优化器 optimizer=torch.optimizer(params=model.
+优化器 optimizer=torch.optim.Adam(params=model.parameters(),lr=0.001)
+损失函数 lossfunction=nn.CrossEntropyLoss()
+
+#3.训练模型
+  1.清空优化器梯度 optimizer.zero_grad()
+  2.predict=model()//pre 现在是概论
+  3.pre_ans=torch,argmax(predict,axis=1)
+  4.算损失函数 loss=lossfuction(predict,train_label)
+  5.loss.backward() 1.反向传播
+  6.optimizer.step()
+
+  #7.print("loss={}".format(torch.mean((pre_ans==train.label).to(torch.float)))
+
+#4.保存模型
+torch.save(model.state_dict(),'mymodel.pt')
+
+#5.模型调用
+param=torch.load('mymodel.pt')
+model.load_state_dict(param)
+
+
+#6.cuda加速 
+model=model.cuda()
+train=trian.cuda()
+test=test.cuda()
+
+
+
+
+
+
